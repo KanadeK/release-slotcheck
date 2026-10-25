@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "allow_unexpected": false,
+  "artifacts": [
+    {
+      "id": "binary",
+      "name": "tool-{version}-{os}-{arch}.zip",
+      "matrix": {
+        "os": [
+          "linux",
+          "windows"
+        ],
+        "arch": [
+          "x64",
+          "arm64"
+        ]
+      },
+      "exclude": [
+        {
+          "os": "windows",
+          "arch": "arm64"
+        }
+      ],
+      "min_bytes": 4,
+      "max_bytes": 100,
+      "companions": [
+        ".sha256"
+      ]
+    }
+  ]
+}
